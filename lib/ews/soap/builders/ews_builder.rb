@@ -179,6 +179,12 @@ module Viewpoint::EWS::SOAP
       }
     end
 
+    # Build the QueryString element
+    # @see http://msdn.microsoft.com/en-us/library/ee693615.aspx
+    def query_string!(query_string)
+      @nbuild[NS_EWS_MESSAGES].QueryString(query_string)
+    end
+
     # Build the ParentFolderId element
     # @see http://msdn.microsoft.com/en-us/library/aa563268.aspx
     def parent_folder_id!(pfid)
