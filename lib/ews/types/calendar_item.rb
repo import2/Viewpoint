@@ -7,6 +7,7 @@ module Viewpoint::EWS::Types
 
     CALENDAR_ITEM_KEY_PATHS = {
       recurring?:   [:is_recurring, :text],
+      uid:          [:u_i_d, :text],
       meeting?:     [:is_meeting, :text],
       cancelled?:   [:is_cancelled, :text],
       duration:     [:duration, :text],
