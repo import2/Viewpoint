@@ -148,6 +148,7 @@ private
     args = {
       :parent_folder_ids => [folder_id],
       :traversal => opts[:traversal],
+      :indexed_page_folder_view => opts[:indexed_page_folder_view],
       :folder_shape => {:base_shape => opts[:shape]}
     }
     args[:restriction] = restr if restr

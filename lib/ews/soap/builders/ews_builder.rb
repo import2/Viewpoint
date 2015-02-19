@@ -149,6 +149,14 @@ module Viewpoint::EWS::SOAP
       @nbuild[NS_EWS_MESSAGES].IndexedPageItemView(attribs)
     end
 
+    # Build the IndexedPageFolderView element
+    # @see https://msdn.microsoft.com/en-us/library/office/aa565306(v=exchg.150).aspx
+    def indexed_page_folder_view!(indexed_page_folder_view)
+      attribs = {}
+      indexed_page_folder_view.each_pair {|k,v| attribs[camel_case(k)] = v.to_s}
+      @nbuild[NS_EWS_MESSAGES].IndexedPageFolderView(attribs)
+    end
+
     # Build the BaseShape element
     # @see http://msdn.microsoft.com/en-us/library/aa580545.aspx
     def base_shape!(base_shape)
